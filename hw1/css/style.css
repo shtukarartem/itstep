@@ -16,7 +16,10 @@ body {
 .lazy {color: rgb(117, 150, 212);}
 .red {color: rgb(199, 72, 72);}
 .lgreen {color: rgb(93, 235, 93);}
-
+.white { color: white;}
+pre {
+    background-color: black;
+}
 
  
  
