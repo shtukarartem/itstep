@@ -9,7 +9,7 @@ table {
     font-weight: 600;
     color: white;
     font-size: 40px;}
-    td:nth-child(3n+1) {vertical-align: top;}
+    td:nth-child(1) {vertical-align: top;}
     td:nth-child(3n) {vertical-align: bottom;}
     tr:nth-child(2) {text-align: center;}
     tr:nth-child(3) {text-align: right;}

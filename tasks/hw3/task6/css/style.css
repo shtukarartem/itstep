@@ -14,16 +14,16 @@ table {
  td:nth-child(n+6) {color: red;}
  .bloodholid {
      color: red;
-     background-image: url(http://lor.by/images/news/298.jpg);
+     background: url(../img/blood.jpg);
      background-size: cover;
  }
  .seaholid {
     color: red;
-    background-image: url(https://lh3.googleusercontent.com/proxy/N3A9CGmL_FwZX6E_fZUgf5QJC7gBlBgzpqyDdasjeMFCLZLCDkLHeOYktbWyf4rYxsW279G5rCsbfvf1SnCK9NpRLxFdOCV4SjTVGdQNBDXdWXktERMvH7tAlfOIfYm3Pvc36AGLmqREMEo9HhCx9ZtheI1SlYc);
+    background-image: url(../img/sea.jpg);
     background-size: cover;  
  }
  .astholid {
     color: red;
-    background-image: url(http://lib.sibadi.org/wp-content/uploads/2019/05/30-ijunja.jpg);
+    background-image: url(../img/ast.jpg);
     background-size: cover;   
  }
