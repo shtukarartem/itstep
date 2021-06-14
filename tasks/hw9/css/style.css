@@ -1,0 +1,65 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 10px 20px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.catbody {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background: red;
+    border-radius: 100px / 50px;
+}
+.cathead {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%;
+    left: -62px;
+}
+.cateye1 {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background:black;
+    border-radius: 50%;
+    left: -4px;
+    top: 37px;
+}
+.cateye2 {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    left: -40px;
+    top: 35px; 
+}
+.catleg1 {
+    position: absolute;
+    width: 19px;
+    height: 79px;
+    background: red;
+    top: 96px;
+    left: 163px;
+}
+.catleg2 {
+    position: absolute;
+    width: 19px;
+    height: 79px;
+    background: red;
+    top: 99px;
+    left: 55px;
+}
