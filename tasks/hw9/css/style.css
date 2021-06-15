@@ -18,14 +18,14 @@ html,body {
     position: absolute;
     width: 200px;
     height: 100px;
-    background: red;
+    background: rgb(230, 90, 35);
     border-radius: 100px / 50px;
 }
 .cathead {
     position: absolute;
     width: 100px;
     height: 100px;
-    background: red;
+    background: rgb(230, 90, 35);
     border-radius: 50%;
     left: -62px;
 }
@@ -51,7 +51,7 @@ html,body {
     position: absolute;
     width: 19px;
     height: 79px;
-    background: red;
+    background: rgb(230, 90, 35);
     top: 96px;
     left: 163px;
 }
@@ -59,7 +59,73 @@ html,body {
     position: absolute;
     width: 19px;
     height: 79px;
-    background: red;
+    background: rgb(230, 90, 35);
     top: 99px;
     left: 55px;
+}
+.lear {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 40px solid rgb(230, 90, 35);
+    border-right: 40px solid transparent;
+    top: 16px;
+    left: -59px;
+}
+.rear {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 40px solid rgb(230, 90, 35);
+    border-left: 40px solid transparent;
+    left: -14px;
+    top: 14px;
+}
+.mouth
+{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgb(66, 58, 58);
+    border-radius: 100px / 100px;
+    top: 57px;
+    left: -25px
+}
+.lms1 {
+    position: absolute;
+
+    top: 55px;
+    left: -12px;
+    width: 30px;
+    height: 2px;
+    background: black;
+    transform: rotate(-30deg);
+}
+.lms2 {
+    position: absolute;
+    top: 75px;
+    left: -12px;
+    width: 30px;
+    height: 2px;
+    background: black;
+    transform: rotate(30deg);
+}
+.rms1 {
+    position: absolute;
+    top: 76px;
+    left: -47px;
+    width: 30px;
+    height: 2px;
+    background: black;
+    transform: rotate(-30deg);
+
+}
+.rms2 {
+    position: absolute;
+    top: 59px;
+    left: -46px;
+    width: 30px;
+    height: 2px;
+    background: black;
+    transform: rotate(30deg);
 }
