@@ -54,6 +54,19 @@ html,body {
     background: rgb(230, 90, 35);
     top: 96px;
     left: 163px;
+    transition-property: transform ;
+    transition-duration: 1s ;
+}
+.catleg1:hover {
+transform: rotate(10deg);
+}
+a {
+    position: fixed;
+    background: black;
+    color: white;
+    top: 5px;
+    padding: 5px;
+
 }
 .catleg2 {
     position: absolute;
@@ -71,6 +84,14 @@ html,body {
     border-right: 40px solid transparent;
     top: 16px;
     left: -59px;
+    transition-property: top ;
+    transition-duration: 1s ;
+}
+.lear:hover {
+top: 10px;
+}
+.start {
+    left: 482px;
 }
 .rear {
     position: absolute;
@@ -91,6 +112,7 @@ html,body {
     top: 57px;
     left: -25px
 }
+
 .lms1 {
     position: absolute;
 
@@ -128,4 +150,33 @@ html,body {
     height: 2px;
     background: black;
     transform: rotate(30deg);
+}
+#box:target {
+    animation: color 4s linear infinite,rotate 4s linear 2;
+}
+#box:target .mouth{
+    animation: bigger 4s linear infinite;
+}
+
+@keyframes color{
+    from{
+        background: rgb(230, 90, 35);
+    }
+    to{
+        background: rgb(81, 38, 182);
+    }
+}
+@keyframes bigger{
+    0%{
+        width: 20px;
+        height: 20px;
+    }
+    50%{
+        width: 30px;
+        height: 30px;
+    }
+    100%{
+        width: 40px;
+        height: 40px;
+    }
 }
