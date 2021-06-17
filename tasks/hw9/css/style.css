@@ -151,7 +151,7 @@ top: 10px;
     background: black;
     transform: rotate(30deg);
 }
-#box:target {
+#box:target .catbody {
     animation: color 4s linear infinite,rotate 4s linear 2;
 }
 #box:target .mouth{
