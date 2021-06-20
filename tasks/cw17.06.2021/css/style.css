@@ -1,5 +1,5 @@
 ul.menu1 {
-    display: flex;
+ 
     padding-left: 0px;
     list-style-type: none;
     width: 250px;
@@ -20,9 +20,10 @@ ul.menu1 > li > a {
     background: #003c84;
     text-transform: uppercase;
 }
-ul.menu1 > li:hover {
-    background: blue;
+ul.menu1 > li > a:hover{
+    background: red;
 }
+
 ul.menu1 > li > a > span{
     line-height: 24px;
 }
@@ -35,12 +36,17 @@ ul.menu2 {
     position: absolute;
     top: 0;
     left: 100%;
-   
+    display: none;
 }
-
+ul.menu1 > li:hover > ul.menu2 {
+    display: block;
+}
 ul.menu2 > li {
-
+    
     background: #003c84;
+}
+ul.menu2 > li:hover {
+    background: aqua;
 }
 ul.menu2 > li > a {
  color: white;
