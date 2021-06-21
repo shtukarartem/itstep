@@ -1,0 +1,100 @@
+body{
+    background: url("../img/pattern.png") repeat;
+    font: 11px 'Droid Sans', Arial, Helvetica, sans-serif;
+    line-height: 1.428571429;
+    color: #606060;
+}
+header{
+    background: #fff;
+    padding: 28px 0px 0px 0px;
+}
+.logo{
+    margin: 13px 0 0 0;
+    padding: 0;
+    float: left;
+}
+.logo a{
+    
+}
+.logo img{
+    text-decoration: none;
+}
+.logo span{
+    font: 300 10px 'Roboto';
+}
+.head-contact{
+float: right;
+}
+.head-contact span{
+
+}
+.head-contact a{
+    text-decoration: none;
+    color: #dd6509;
+    min-width: 100px;
+}
+.main-menu{
+    display: flex;
+    list-style-type: none;
+
+}
+.main-menu > li {
+    width: 100px;
+    font: bold 15px 'Asap';
+    position: relative;
+    text-transform: uppercase;
+    min-width: 90px;
+    
+}
+.main-menu > li > a {
+    text-decoration: none;
+    color: #595252;
+    display: flex;
+    align-items: center;
+    min-width: 90px;
+}
+.main-menu > li:hover > a {
+    color:#dd6509 ;}
+.main-menu > li > a.active {
+    color: #dd6509;
+}
+.main-menu > li > a > span {
+
+    
+}
+.main-menu > li > ul {
+      list-style-type: none;
+    position: relative;
+    background: #acadad;
+    display: none;
+    z-index: 10;
+}
+.main-menu > li:hover > ul {
+display: block;
+}
+.main-menu > li > ul > li{
+    
+}
+.main-menu > li > ul > li > a {
+    text-decoration: none;
+    color: #fff;
+    font: 10px 'Droid Sans', Arial, Helvetica, sans-serif;
+    
+}   
+.main-menu > li > ul > li > a > span {
+    
+}
+.main-menu > li > ul > li > ul {
+    list-style-type: none;
+    position: relative;
+    display: none;
+}
+.main-menu > li > ul > li > ul > li {
+    
+}
+.main-menu > li > ul > li > ul > li > a {
+    text-decoration: none;
+}   
+.main-menu > li > ul > li > ul > li > a > span {
+    
+}

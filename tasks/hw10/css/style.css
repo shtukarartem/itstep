@@ -7,11 +7,11 @@ li {
     position: relative;
     background: green;
     padding: 10px;
-    margin: -169px;
+    margin: -225px;
     height: 43px;
-    top: 254px;
+    top: 288px;
     left: 373px;
-    width: 291px;
+    width: 402px;
     transform: rotate(-66deg);
     box-sizing: border-box;
     transition-property: top, left ;
@@ -22,8 +22,8 @@ a:hover {
     top: 346px;
 }
 li:hover {
-    left: 332px;
-    top: 346px; 
+    top: 360px;
+    left: 341px 
 }
 
 a {
