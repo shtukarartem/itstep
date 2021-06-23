@@ -57,23 +57,32 @@ float: right;
     color:#dd6509 ;}
 .main-menu > li > a.active {
     color: #dd6509;
+    margin-bottom: 30px;
 }
 .main-menu > li > a > span {
 
     
 }
 .main-menu > li > ul {
-      list-style-type: none;
-    position: relative;
+    list-style-type: none;
+    position: absolute;
     background: #acadad;
     display: none;
     z-index: 10;
+    top: 45px;
+    height: 159px;
+    padding: 18px 0px 18px 15px;
+    margin-right: 35px;
+    width: 95px;
 }
 .main-menu > li:hover > ul {
 display: block;
 }
 .main-menu > li > ul > li{
-    
+    padding: 7px 0px;
+}
+.main-menu > li > ul > li > a:hover {
+    color: #dd6509;
 }
 .main-menu > li > ul > li > a {
     text-decoration: none;
@@ -84,17 +93,35 @@ display: block;
 .main-menu > li > ul > li > a > span {
     
 }
+.main-menu > li > ul > li:hover > ul {
+display: block;
+}
 .main-menu > li > ul > li > ul {
     list-style-type: none;
-    position: relative;
+    position: absolute;
+    background: #acadad;
     display: none;
+    z-index: 11;
+    left: 96px;
+    padding-left: 0px;
+    height: 131px;
+    padding: 17px 11px;
+    top: 28px;
+    width: 78px;
 }
 .main-menu > li > ul > li > ul > li {
-    
+    padding: 7px;
+    padding-left: 6px;
+    margin-left: -9px;  
 }
 .main-menu > li > ul > li > ul > li > a {
     text-decoration: none;
+    color: #fff;
+    font: 10px 'Droid Sans', Arial, Helvetica, sans-serif;
 }   
+.main-menu > li > ul > li > ul > li > a:hover{
+    color: #dd6509;
+}
 .main-menu > li > ul > li > ul > li > a > span {
     
 }
