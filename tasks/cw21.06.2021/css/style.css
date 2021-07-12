@@ -125,3 +125,55 @@ display: block;
 .main-menu > li > ul > li > ul > li > a > span {
     
 }
+.wrapper{
+    background: #fff;
+    box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 10%);
+    margin-bottom: 150px;
+    position: relative;
+    z-index: 10000;
+}
+/* @media (max-width:1169px){
+    .wrapper{
+        max-width: 100% !important;
+    }
+}
+@media (min-width:1170px){
+    .wrapper{
+        margin-top: -70px;
+    }
+}*/
+.main-slider .carousel-item{
+    width: 100%;
+    height: 550px;
+    background-size: cover;
+    background-position: center center;
+    background-size: 100% auto;
+}
+.main-slider .carousel-indicators button{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    padding: 0;
+    margin: 5px;
+    background: #fff;
+    border: 0;
+    opacity: 1;
+    margin-bottom: 5rem;
+}
+.main-slider .carousel-indicators button.active, .main-slider .carousel-indicators button:hover{
+    background: #dc6511;
+}
+.products {
+    top: 1px;
+}
+.title {
+    text-align: center;
+}
+.main-tech {
+    position: relative;
+}
+.tech-item{
+    border: 1px solid #ddd;
+    padding: 25px 15px;
+    margin-bottom: 20px;
+}
