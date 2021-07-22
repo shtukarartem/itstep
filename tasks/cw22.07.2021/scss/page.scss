@@ -143,9 +143,9 @@ h1, h2, h3, h4 {
     a {
       transition: background 400ms ease-in-out;
     }
-  
+}
       @each $social, $color in $social-colors {
-        #{$social} a:hover {
+        .#{$social} a:hover {
             background: $color !important;
         }
         
@@ -893,4 +893,4 @@ h1, h2, h3, h4 {
     line-height: 20px;
     vertical-align: top;
   }
-  }
+  
