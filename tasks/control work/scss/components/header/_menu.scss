@@ -1,0 +1,29 @@
+header {
+    background: url("../img/header-bg.svg") repeat;
+    
+   
+    }
+html {
+    overflow-x: hidden;
+}
+ul {
+    
+    display: flex;
+    list-style-type: none;
+
+   li{
+       
+       font-size: 18px;
+       margin-right: 34px;
+       margin-top: 26px;
+    a{
+        text-decoration: none;
+        span{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            color: white;
+        }
+       }
+   }
+}
+

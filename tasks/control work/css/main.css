@@ -1,0 +1,47 @@
+header {
+  background: url("../img/header-bg.svg") repeat; }
+
+html {
+  overflow-x: hidden; }
+
+ul {
+  display: flex;
+  list-style-type: none; }
+  ul li {
+    font-size: 18px;
+    margin-right: 34px;
+    margin-top: 26px; }
+    ul li a {
+      text-decoration: none; }
+      ul li a span {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        color: white; }
+
+.header-text {
+  margin-top: 181px;
+  margin-left: 235px;
+  font-size: 43px; }
+  .header-text span {
+    font-family: 'Palatino Linotype', sans-serif;
+    font-style: italic;
+    color: white; }
+
+.main-text {
+  margin-top: 33px;
+  margin-left: 235px; }
+  .main-text span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 65px;
+    color: white; }
+
+.text-body {
+  margin-top: 52px;
+  margin-left: 235px; }
+  .text-body span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 23px;
+    color: white; }
+
+/*# sourceMappingURL=main.css.map */
