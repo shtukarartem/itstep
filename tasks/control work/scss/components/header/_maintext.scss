@@ -29,7 +29,12 @@
     }
 }
 .man-img{
+    height: 0px;
+    
     img{
-    top:0px;
-    left:0px;}
+        position: relative;
+        top: -631px;
+        left: 897px;
+        margin-bottom: 10px;
+    }
 }

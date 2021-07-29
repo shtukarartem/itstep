@@ -1,6 +1,8 @@
 header {
-  background: url("../img/header-bg.svg") no-repeat;
-  background-size: 100%; }
+  background: url("../img/header-bg-2.jpg") no-repeat;
+  background-size: cover;
+  height: 1006px;
+  width: 100%; }
 
 html {
   overflow-x: hidden; }
@@ -50,8 +52,48 @@ ul {
     font-size: 23px;
     color: white; }
 
-.man-img img {
-  top: 0px;
-  left: 0px; }
+.man-img {
+  height: 0px; }
+  .man-img img {
+    position: relative;
+    top: -631px;
+    left: 897px;
+    margin-bottom: 10px; }
+
+.header-button {
+  margin-bottom: 20px;
+  margin-left: 300px;
+  margin-top: 71px; }
+  .header-button .btn {
+    width: 200px;
+    height: 60px;
+    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    text-transform: uppercase; }
+  .header-button .btn-primary {
+    background-color: #f42267; }
+  .header-button .btn-secondary {
+    background-color: #67328d;
+    margin-left: 24px; }
+
+.about-comp {
+  background: url("../img/World-Map.jpg") no-repeat;
+  background-size: 100%; }
+
+.au-header {
+  font-family: 'Palatino Linotype', sans-serif;
+  font-style: italic;
+  font-size: 33px;
+  margin-top: 102px;
+  margin-left: 306px; }
+
+.au-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  margin-left: 306px;
+  margin-top: 21px; }
 
 /*# sourceMappingURL=main.css.map */
