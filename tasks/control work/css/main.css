@@ -1,16 +1,22 @@
 header {
-  background: url("../img/header-bg.svg") repeat; }
+  background: url("../img/header-bg.svg") no-repeat;
+  background-size: 100%; }
 
 html {
   overflow-x: hidden; }
 
+.logo {
+  margin-top: 46px;
+  margin-left: 80px; }
+
 ul {
+  float: right;
   display: flex;
   list-style-type: none; }
   ul li {
     font-size: 18px;
     margin-right: 34px;
-    margin-top: 26px; }
+    margin-top: 70px; }
     ul li a {
       text-decoration: none; }
       ul li a span {
@@ -43,5 +49,9 @@ ul {
     font-family: 'Montserrat', sans-serif;
     font-size: 23px;
     color: white; }
+
+.man-img img {
+  top: 0px;
+  left: 0px; }
 
 /*# sourceMappingURL=main.css.map */
