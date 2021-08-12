@@ -22,10 +22,10 @@ var d = 2, e = 3;
 
 
  var number = 123, firstNumber, secondNumber, thirdNumber, numbersSum, reverseNumber = "";
- thirdNumber = number % 10;
  firstNumber = Math.floor(number / 100);
  secondNumber = Math.floor(number / 10);
  secondNumber = secondNumber % 10;
+ thirdNumber = number % 10;
  numbersSum = firstNumber + secondNumber + thirdNumber;
  console.log(numbersSum);
 
