@@ -53,3 +53,13 @@ do {
     n++;
 } while (i != 10);
 
+let x = 0, y = 0;
+
+for (; y <= 100; y++) {
+    for (; x<= 100; x++){
+        if (3 * x + 4 * y == 2021) {
+            console.log(x, y)
+        }
+    }
+    
+}
