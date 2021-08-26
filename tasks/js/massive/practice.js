@@ -100,9 +100,9 @@ if (countDecrease == (n-1)) {
 
 for (let i = 0, repeatElement = 0; i < n; i++) {
     repeatElement = a[i];
-    for (let j = 1; j < n; j++) {
-        if (repeatElement == a[j]) {
-            a[j] = a[j+1];
+    for (let j = 0; j < n; j++) {
+        if (repeatElement == a[j+1]) {
+            a[j+1] = a[j+2];
         }
     }
 }

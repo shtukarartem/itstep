@@ -39,10 +39,20 @@ for (let i = 0; i < n; i++){
 console.log(e,r)
 
 
+<<<<<<< HEAD
 let E = 0.0001, x = 4, l = 0, k = 1;
 
 for (; l < E; k++){
     l = (x**k)/k*(k-1);
     sum = sum + ((x**k)/k*(k-1))
     console.log(l)
+=======
+let E = 0.0001, x = 4, l = 0, k = 1, fr = 1;
+
+for (; l < E; k++){
+    fr = fr * k;
+    l = (x**k)/k*(k-1);
+    sum = sum + ((x**k)/fr)
+    console.log(sum , l, fr, k)
+>>>>>>> e9e26eb731bfce174cbb26ae618bcc3fa1b409ae
 }
