@@ -84,9 +84,9 @@ console.log(a)
 
 let countIncrease = 0, countDecrease = 0;  //#9
 for (let i = 0; i < n; i++){
-    if (a[i] > a[i+1]) {
+    if (a[i] < a[i+1]) {
         countIncrease++;
-    } else if (a[i] < a[i+1])  {
+    } else if (a[i] > a[i+1])  {
         countDecrease++;
     }
 }
