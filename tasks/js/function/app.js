@@ -9,10 +9,7 @@ for (let i = 0; i < n; i++){
 }
 return a;
 }
-let a = [];
- a = fillArray(a,10);
-   
- console.log(a);
+
 
  function summArray(a) {
      let sum = 0;
@@ -24,3 +21,13 @@ let a = [];
 
  let x = summArray(a);
  console.log(x);
+
+
+
+
+
+
+ let a = [];
+ a = fillArray(a,10);
+   
+ console.log(a);
