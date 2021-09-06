@@ -24,9 +24,6 @@ return a;
 
 
 
-
-
-
  let a = [];
  a = fillArray(a,10);
    
