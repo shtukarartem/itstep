@@ -67,5 +67,31 @@ a.forEach((item) => {
 
 console.log(b);
 
+a = [1,2,3,4,5];
 
+a = a.map(function(square) {//#16
+    return square ** 2;
+});
+console.log(a);
 
+a = [1,2,3,-4,5];//#17
+
+if (a.every(elem => elem > 0 == true)) {
+    console.log("все числа больше 0")
+} else {
+    console.log("не все числа больше 0")
+}
+
+a = [1,2,3,4,5];//#18
+
+if (a.some(elem => elem > 0 == true)) {
+    console.log("все числа больше 0")
+} else {
+    console.log("не все числа больше 0")
+}
+
+a = [1, 2, 3, 4, 5];
+
+let result = a.reduce((sum, current) => sum + current);
+
+console.log(result);
