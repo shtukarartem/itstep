@@ -42,7 +42,7 @@ if (a.includes(b)) {
 
 
 a = [1,3,6,4,3,3,5,6], b = [];
-b = a.forEach()
+b = a.forEach(function)
 
 
 
