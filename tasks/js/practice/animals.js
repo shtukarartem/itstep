@@ -53,8 +53,7 @@ class Horse extends Animals{
 
 class Veterinarian {
 treatAnimal(Animal){
-    this.Animal = Animal;
-    console.log(this.Animal.food, this.Animal.location)
+    console.log(Animal.food, Animal.location)
     }
 }
 
