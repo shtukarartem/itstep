@@ -82,6 +82,7 @@ basket.addProduct(prod6);
 let poul = new User("poulAnderson","qwerty12345");
 
 poul.addBasket(basket);
+
 console.log(basket)
 console.log(poul);
 
