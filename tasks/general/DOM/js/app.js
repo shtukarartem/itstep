@@ -46,3 +46,12 @@ out +="</tr>"
 out += "</table>";
 
 document.write(out);
+
+var fruits = ["apple", "orange", "lime","watermelon"];
+
+out = "<ul>";
+for (let i = 0; i < 4; i++){
+    out = out + `<li>${fruits[i]}</li>`;
+}
+out += "</ul>"; 
+document.write(out);
