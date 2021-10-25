@@ -60,4 +60,5 @@ for (let i = 0; i < element.children.length; i++) {//3.3
   element = document.getElementById("fifth-element");
   element.parentElement.style.color = "blue"//5.1
  let element2 = element.parentNode;
- element2.parentElement.style.color = "yellow";//5.2
+ //element2.parentElement.style.color = "yellow";//5.2
+ element.parentNode.parentNode.style.color = "yellow"
