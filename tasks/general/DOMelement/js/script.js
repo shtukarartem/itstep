@@ -4,7 +4,7 @@ console.log(element);
 element.classList.add("www") //1.1
 element.classList.remove("www")//1.2
 console.log(element.classList.contains("www"))//1.3
-element.classList.toggle("www")//1.4
+element.classList.toggle("www")//1.4*/
 console.log(element.classList)//1.5
 let trglist = element.classList;//1.6
 trglist.forEach(function (element){
