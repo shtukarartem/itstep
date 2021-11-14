@@ -2,7 +2,8 @@
     width: 800px;
     display: flex;
     flex-wrap: wrap;
-
+    transition-property: transform ;
+    transition-duration: 3s;
 }
 .black{
     height: 200px;
