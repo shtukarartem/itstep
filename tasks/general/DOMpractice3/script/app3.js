@@ -22,7 +22,8 @@ button2.onclick = function(){
 
  }
 }
-
+var angle = 0;
 button3.onclick = function(){
-document.querySelector("#container").style.transform = "rotate(90deg)"
+    angle += 90;
+document.querySelector("#container").style.transform = `rotate(${angle}deg)`
 }
