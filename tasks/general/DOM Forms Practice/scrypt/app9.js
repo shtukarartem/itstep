@@ -3,7 +3,6 @@ let text;
 
 button.addEventListener("click", function(){
     let val = button.textContent;
-    console.log(val)
     switch(val){
         case "Сохранить":
             text = input.value;

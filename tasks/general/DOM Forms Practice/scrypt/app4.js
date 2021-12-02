@@ -4,7 +4,7 @@ document.getElementById("input").onkeyup = function(event){
        let imput = document.getElementById("input").value;
        imput = imput.split(" ")
        sum = 0;
-       div.innerHTML = ""
+       
             for (let i = 0; i< imput.length; i++){
                 sum = sum + +imput[i];  
                 div.innerHTML = sum;
