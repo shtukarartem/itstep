@@ -5,6 +5,7 @@ function getRandomNumber(min,max) {
 var player = [];//создает массив игроков
 var current = 1;//создает переменную хода игрока
 var field = [[0,0,0],[0,0,0],[0,0,0]];// создает двумерный массив поля
+var bla = '';
 
 document.forms.start_form.start_play.onclick = function () {// событие клика по кнопке
     document.forms.start_form.classList.add("d-none");//скрывает начальную формк
@@ -65,26 +66,32 @@ function play(event){// создает функцию игры
 
     if(current == 1){// если ход первого игрока
         td.classList.add("k");// в выбранную ячейку добавляем класс к т.е. крестик
+        bla = `игрок ${player[current]} поставил крестик в ${comment(x,y)}`;
         current = 2;//меняем ход на втрого
         field[x][y] = 1//в выбранное поле записываем значение 1 что является крестиком 
+        
     } else {//если ход второго
         td.classList.add("n");// в выбранную ячейку добавляем класс n т.е. нолик
+        bla = `игрок ${player[current]} поставил нолик в ${comment(x,y)}`;
         current = 1;//меняем ход на втрого
-        field[x][y] = -1;//в выбранное поле записываем значение -1 что является ноликом 
+        field[x][y] = -1;//в выбранное поле записываем значение -1 что является ноликом
+        
     }
 
     let winner = checkWinner();// проверяет есть ли победитель
     if(winner > 0){//если победитель есть(1 или 2)
         document.querySelector(".result").innerHTML = `Победил игрок <b>${player[winner]}</b>`;//выводит в поле результата имя победившего игрока
         document.querySelector(".current").innerHTML = ``;// очищает поле игрока который ходит
+        document.querySelector(".logs").innerHTML += `Выйграл ${player[winner]}`
         document.querySelector(".field table").removeEventListener("click", play, false);// удаляет событие по клику на ячейку таблицы
     } else if(checkDraw()){//проверяет заполнение ячеек, если все ячейки заполнены а победителя нет
         document.querySelector(".current").innerHTML = ``;//очищает поле игрока который ходит
         document.querySelector(".field table").removeEventListener("click", play, false);//удаляет событие по клику на ячейку таблицы
         document.querySelector(".result").innerHTML = `Ничья`;// в поле результата выводит надпись
+        document.querySelector(".logs").innerHTML += "Ничья"
     } else {// если нет победителя и есть еще незаполненые поля
+        document.querySelector(".logs").innerHTML += `${bla}<br>`
         document.querySelector(".current").innerHTML = `Ходит игрок <b>${player[current]}</b>`;// выводит какого игрока сейчас ход
-        document.querySelector(".logs").innerHTML = ``
     }
 
     
@@ -152,26 +159,31 @@ function comment(x,y){
     let comX="";
     let comY="";
     switch (x) {
-        case 1 :
+        case 0 :
         comX = "влево"
         break
-        case 2 :
+        case 1 :
         comX = "центр"
         break
-        case 3 :
+        case 2 :
         comX = "вправо"
         break
     }
     switch (y) {
-        case 1 :
+        case 0 :
         comY = "вверх"
         break
-        case 2 :
-        comY = "центр"
+        case 1 :
+        if (x == 1) {
+         comY = ''   
+        } else {
+            comY = "центр"
+        }
         break
-        case 3 :
+        case 2 :
         comY = "вниз"
         break
     }
-    return comX,comY
+    let arr = '' + comX + ' ' + comY 
+    return arr
 }
