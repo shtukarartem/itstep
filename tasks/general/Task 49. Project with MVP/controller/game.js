@@ -30,8 +30,8 @@ class GameController{
             document.forms.login_form.classList.remove("was-validated");
             document.forms.login_form.classList.add("d-none");
             
-            this.createGame();
-            this.createField();
+            createGame();
+           createField();
 
             document.querySelector(".current").innerHTML = `Ходит игрок <b>${this.game.getCurrentPlayerName()}</b>`;
             document.querySelector(".game_form").classList.remove("d-none");
