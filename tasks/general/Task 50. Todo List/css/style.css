@@ -128,3 +128,6 @@
   .btn:hover {
     background-color: #bbb;
   }
+  .d-none{
+    display: none;
+  }

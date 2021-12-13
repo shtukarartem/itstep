@@ -1,21 +1,70 @@
+var todoList = []
+let liList = document.querySelectorAll("li");
+
+for (let i = 0; i < liList.length; i++){
+  todoList[i] = liList[i]
+  //console.log(todoList[i])
+}
+
 document.forms.todo_form.button.onclick = function(){
+  liList = document.querySelectorAll("li");
+  todoList = []
+  for (let i = 0; i < liList.length; i++){
+    todoList[i] = liList[i]
+  }
     let li = document.createElement("li");
     li.innerHTML = `${document.forms.todo_form.task.value}<span class="close">×</span><span class = "arrow">&#9998;</span>`
+    li.draggable = true;
     document.querySelector("ul").append(li);
+
     return false
 }
 
 document.querySelector("ul").onclick = function(event){
- let li = event.target;
+  liList = document.querySelectorAll("li");
+  todoList = []
+  for (let i = 0; i < liList.length; i++){
+    todoList[i] = liList[i]
+    console.log(liList[i])
+  } 
+  let li = event.target;
  if(li.tagName == "LI")
-    li.classList.toggle("checked")
+ for (let i = 0; i < liList.length; i++){
+  todoList[i] = liList[i]
+  console.log(liList[i])
+} 
+
  
+    li.classList.toggle("checked")
+
  
  if (li.classList.contains("close")) {
-    //li.parentNode.remove()
-    console.log(li.parentNode.textContent)
+  liList = document.querySelectorAll("li");
+  todoList = []
+  for (let i = 0; i < liList.length; i++){
+    todoList[i] = liList[i]
+  }  
+  li.parentNode.remove()
+
 }
 if (li.classList.contains("arrow")) {
+  liList = document.querySelectorAll("li");
+  todoList = []
+  for (let i = 0; i < liList.length; i++){
+    todoList[i] = liList[i]
+  }
+  document.forms.todo_form.button.style.display = "none";
+  document.forms.todo_form.edit_btn.style.display = "block";
+  onkeydown = function (event) {
+  if (event.code == "Escape") {
+    document.forms.todo_form.button.style.display = "block";
+    document.forms.todo_form.edit_btn.style.display = "none";
+    let list = document.querySelectorAll("li");
+    for(let i = 0; i < list.length; i++){
+        list[i].classList.remove("add")
+        document.forms.todo_form.task.value = ''
+    }     }
+  }
     let list = document.querySelectorAll("li");
     for(let i = 0; i < list.length; i++){
         list[i].classList.remove("add")
@@ -25,13 +74,22 @@ if (li.classList.contains("arrow")) {
         document.forms.todo_form.task.value = text;
         li.parentNode.classList.add("add")
     }
+
  
 }
 
 
 document.forms.todo_form.edit_btn.onclick = function(){
-document.querySelector(".add").innerHTML = `${document.forms.todo_form.task.value}<span class="close">×</span><span class = "arrow">&#9998;</span>`
+  liList = document.querySelectorAll("li");
+  todoList = []
+  for (let i = 0; i < liList.length; i++){
+    todoList[i] = liList[i]
+  }
+  document.querySelector(".add").innerHTML = `${document.forms.todo_form.task.value}<span class="close">×</span><span class = "arrow">&#9998;</span>`
 document.querySelector(".add").classList.remove(".add")
+document.forms.todo_form.button.style.display = "block";
+document.forms.todo_form.edit_btn.style.display = "none";
+document.forms.todo_form.task.value = ''
 return false
 }
 
@@ -93,7 +151,21 @@ for (const task of taskElements) {
     return nextElement;
   };
 
-
+  onkeydown = function (event) {
+    
+    if (event.code == 'KeyZ' && (event.ctrlKey || event.metaKey)) {
+     // console.log(liList)
+      
+      document.querySelector("ul").innerHTML = '';
+      for (let i = 0; i < todoList.length; i++){
+        let li = document.createElement("li")
+        //li.outerHTML = liList[i].outerHTML;
+        document.querySelector("ul").innerHTML += todoList[i].outerHTML;
+        
+        //document.querySelector("ul").innerHTML += liList[i];
+      }
+    }
+  }
 
 
 
