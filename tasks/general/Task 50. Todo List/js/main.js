@@ -167,5 +167,21 @@ for (const task of taskElements) {
     }
   }
 
+  function persistence(num) {
+    let i=0;
+    num = (num + "").split("")
+    console.log(num)
+    while ( num.length > 1){
+      num = num.reduce((a,b)=>a*b);
+      console.log(num)
+      num = (num + "").split("")
+      console.log(num)
+      i++
+    }
+   return i
+ }
+ let num = [3,9]
 
-
+console.log([3,9].reduce(function (a,b) {return a * b},1))
+console.log(persistence(999))
+console.log(num.length)
