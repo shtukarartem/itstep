@@ -21,7 +21,7 @@ if (a + b >c && a + c > b && b + c > a) {
     console.log("нельзя")
 }
 //4
-let age:number = 12;
+let age : number = 12;
 
 if (age<=17) {
     console.log("молодой")
