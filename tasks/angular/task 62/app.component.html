@@ -1,0 +1,31 @@
+<div class="container">
+  <div  class="header">
+      <form action="" name="todo_form">
+          <h2>Мой список дел</h2>
+          <input type="number" class="countImput" placeholder="код">
+          <input #newTask type="text" placeholder="Task...">
+          <input type="number" class="countImput" placeholder="Цена одного">
+          <input type="number" class="countImput"placeholder="Количество">
+          
+          <button  class="btn">Добавить</button><br>
+          <button #changeBtn  class="btn"  >изменить</button>
+      </form>
+  </div>
+    
+
+
+  <table >
+      <tr>
+        <th scope="col">Код товара</th>
+        <th scope="col">Товар</th>
+        <th scope="col">Цена за 1 ед.</th>
+        <th scope="col">кол-во</th>
+      </tr>
+      <tr *ngFor="let task of tasks; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{task.productСode}}</td>
+        <td>{{task.title}}</td>
+
+      </tr>
+  </table>
+</div>

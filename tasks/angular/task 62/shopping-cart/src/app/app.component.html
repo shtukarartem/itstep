@@ -1,0 +1,36 @@
+<div class="container">
+  <div  class="header">
+      <form action="" name="todo_form">
+          <h2>Мой список дел</h2>
+          <input #newCode type="number" class="countImput" placeholder="код">
+          <input #newNumber type="text" placeholder="Task...">
+          <input #newPrice type="number" class="countImput" placeholder="Цена одного">
+          <input #newCount type="number" class="countImput" placeholder="Количество">
+          
+          <button  class="btn" [class] = "btDisp" (click) = "addProduct(newCode.value,newNumber.value,newPrice.value,newCount.value);newCode.value = '';newNumber.value='';newPrice.value= '';newCount.value = '' ">Добавить</button><br>
+          <button #changeBtn [class] = "disp" class="btn" (click)="commit(newCode.value,newNumber.value,newPrice.value,newCount.value);newCode.value = '';newNumber.value='';newPrice.value= '';newCount.value = ''" >изменить</button>
+      </form>
+  </div>
+    
+
+
+  <table >
+      <tr>
+        <th scope="col">номер</th>
+        <th scope="col">Код товара</th>
+        <th scope="col">Товар</th>
+        <th scope="col">Цена за 1 ед.</th>
+        <th scope="col">кол-во</th>
+      </tr>
+      <tr *ngFor="let task of tasks; let i = index"(dblclick)="newCode.value = ''+task.productcode; newNumber.value = task.title;newPrice.value = ''+task.priceofoneitem; newCount.value = ''+task.amount;changeProduct(i)">
+        <td>{{i+1}}</td>
+        <td>{{task.productcode}}</td>
+        <td>{{task.title}}</td>
+        <td>{{task.priceofoneitem}}</td>
+        <td>{{task.amount}}</td>
+        <td class="edit" (click) = "newCode.value = ''+task.productcode; newNumber.value = task.title;newPrice.value = ''+task.priceofoneitem; newCount.value = ''+task.amount;changeProduct(i)" >&#9998;</td>
+        <td class="close" (click) = "deleteProduct(i)">×</td>
+      </tr>
+  </table>
+  <div>итого :{{totalPrice()}}</div>
+</div>
