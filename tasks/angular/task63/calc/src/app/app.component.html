@@ -1,0 +1,27 @@
+<div>
+  <input type="number" #value1 [(ngModel)] = "firstValue" class="form-control inputWigth" placeholder="first number" aria-label="Username">
+  <input type="number" #value2 [(ngModel)] = "secondValue" class="form-control inputWigth" placeholder="second number" aria-label="Username">
+</div>
+
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Сумма</th>
+      <th scope="col">Разность</th>
+      <th scope="col">Произведение</th>
+      <th scope="col">Деление</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>{{summ()}}</th>
+      <td>{{dif()}}</td>
+      <td>{{mult()}}</td>
+      <td>{{divide()}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<input type="number" [(ngModel)] = "guessNumber" class="form-control inputWigth" placeholder="впишите число" aria-label="Username">
+
+<div>{{findNumber()}}</div>

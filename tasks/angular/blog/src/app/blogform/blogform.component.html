@@ -1,0 +1,23 @@
+<div class="blog_form">
+    <div class="mb-3">
+        <label for="blog_title" class="form-label">Название блога</label>
+        <input [(ngModel)] = "title" type="text" class="form-control" id="blog_title" placeholder="Введите название блога">
+      </div>
+      <div class="mb-3">
+        <label for="blog_preview" class="form-label">Превью</label>
+        <input [(ngModel)]= "preview" type="text" class="form-control" id="blog_preview" placeholder="Введите превью блога">
+      </div>
+      <div class="mb-3">
+        <label for="blog_user" class="form-label">Пользователь:</label>
+        <input [(ngModel)] = "user" type="text" class="form-control" id="blog_user" placeholder="Введите пользователя блога">
+      </div>
+      <div class="mb-3">
+        <label for="blog_date" class="form-label">Дата:</label>
+        <input [(ngModel)] = "date" type="date" class="form-control" id="blog_date" placeholder="Дата блога">
+      </div>
+      <div class="mb-3">
+        <label for="blog_text" class="form-label">Текст блога:</label>
+        <textarea [(ngModel)] = "text" class="form-control" id="blog_text" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-outline-success" (click) = "addBlog()">Success</button>
+</div>

@@ -50,8 +50,8 @@ this.tasks[this.ind].productcode = parseInt(productcode);
 this.tasks[this.ind].title = title;
 this.tasks[this.ind].priceofoneitem = parseInt(priceofoneitem);
 this.tasks[this.ind].amount = parseInt(amount);
-this.disp = "btnDnone"
-this.btDisp = "btnBlock"
+        this.disp = "btnDnone"
+        this.btDisp = "btnBlock"
 }
 
 }

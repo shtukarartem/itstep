@@ -1,0 +1,11 @@
+<div class="general">
+<div class="firstUser">
+  <div>{{member1.name}}</div>
+  <input type="text" [(ngModel)] = 'text1' (keyup)='addMessage($event,1)'></div>
+<div class="chatWindow"><app-window [messages] = "messagesList"></app-window></div>
+<div class="secondUser">
+
+  <div>{{member2.name}}</div>
+  <input type="text" [(ngModel)] = 'text2' (keyup)='addMessage($event,2)' >
+</div>
+</div>

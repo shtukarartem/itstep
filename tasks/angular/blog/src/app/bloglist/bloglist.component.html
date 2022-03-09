@@ -1,0 +1,12 @@
+<div class="blog_list">
+    <div class="row">
+        <div class="col-12">
+            <div class="blog_list_head">
+                Блоги
+            </div>
+        </div>
+        <div *ngFor = "let blog of blogs" class="col-12">
+            <app-blog [blog] = "blog"></app-blog>
+        </div>
+    </div>
+</div>

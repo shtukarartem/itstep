@@ -1,0 +1,28 @@
+.general{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .chatWindow{
+        width: 600px;
+        height: 600px;
+        margin: 0px;
+        border: 2px solid #000;
+        border-radius: 10px;
+
+    }
+    .firstUser{
+        width: 400px;
+        height: 200px;
+        border: 2px solid #000;
+        border-radius: 10px;
+        margin: 0px;
+    }
+    .secondUser{
+        width: 400px;
+        height: 200px;
+        border: 2px solid #000;
+        border-radius: 10px;
+        margin: 0px;
+    }
+}

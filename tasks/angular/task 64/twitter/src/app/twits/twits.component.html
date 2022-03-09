@@ -1,0 +1,11 @@
+<ul>
+    <li *ngFor="let twit of twits;let i = index">
+        <div class="username">
+            @{{twit.userName}}
+        </div>
+        <div class="twittext">
+            {{twit.twitText}}
+        </div>
+
+    </li>
+</ul>

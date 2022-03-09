@@ -1,0 +1,20 @@
+<ul>
+    <li *ngFor="let message of messages;let i = index" >
+        <div *ngIf="message.userName == 'Петя'" class="left">
+            <div class="username">
+                {{message.userName}}
+            </div>
+            <div class="twittext">
+                {{message.messageText}}
+            </div>
+        </div>
+        <div *ngIf="message.userName == 'Вася'" class="right">
+            <div class="username">
+                {{message.userName}}
+            </div>
+            <div class="twittext">
+                {{message.messageText}}
+            </div>
+        </div>
+    </li>
+</ul>
