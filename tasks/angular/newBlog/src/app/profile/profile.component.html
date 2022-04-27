@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form class="row" [formGroup]="profileForm" novalidate (ngSubmit)="editUser()">
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="user_name" class="form-label">Имя</label>
+                        <input type="text" formControlName="name" name="name" class="form-control" id="user_name" placeholder="Имя" value="{{user.name}}">
+                    </div>
+                    <div *ngIf="profileForm.controls['name'].invalid && profileForm.controls['name'].touched" class="alert alert-danger">
+                        Что-то пошло не так
+                    </div>  
+                </div>
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="user_login" class="form-label">Логин</label>
+                        <input type="text" formControlName="login" name="login" class="form-control" id="user_login" placeholder="Логин" value="{{user.login}}">
+                    </div>
+                    <div *ngIf="profileForm.controls['login'].invalid && profileForm.controls['login'].touched" class="alert alert-danger">
+                        Что-то пошло не так
+                    </div>  
+                </div>
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="user_password" class="form-label">Пароль</label>
+                        <input type="password" formControlName="password" name="password" class="form-control" id="user_password" placeholder="Пароль" value="{{user.password}}">
+                    </div>
+                    <div *ngIf="profileForm.controls['password'].invalid && profileForm.controls['password'].touched" class="alert alert-danger">
+                        Что-то пошло не так
+                    </div>  
+                </div> 
+                
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary" [disabled]="profileForm.invalid">изменить</button>
+                </div>
+                <div class="col-12">
+                    <a routerLink="/home" (click) = "logOut()">Выйти</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

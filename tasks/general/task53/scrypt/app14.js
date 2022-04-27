@@ -18,6 +18,7 @@ if(isFinal){
         item.classList.toggle("black")
        }
     })
+    console.log(tds)
     number ++
     let fin = document.querySelectorAll(".black");
 if(fin == 36){
@@ -26,5 +27,6 @@ if(fin == 36){
     div.innerHTML = `Игра пройдена за ${number} шагов!!`
     document.append(div)
     isFinal = true
+    
 }
 }

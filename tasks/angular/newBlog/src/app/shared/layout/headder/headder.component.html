@@ -1,0 +1,25 @@
+<div class="headder">
+    <div class="row">
+        <div class="col-6">
+            <span class="hadder-name">
+                Мои Блоги
+            </span>
+            <span>{{user.name}}</span>
+        </div>
+        <div class="col-6">
+            <ul class="ul-h">
+                <li *ngIf="isAuth == false; else elseBlock">
+                    <a href ="" routerLink = "/sign"><span>Войти/Регистрация</span></a>
+                   
+                </li>
+                <ng-template #elseBlock>
+                    <li><a href ="" [routerLink]="['/profile', user.id]"><span>{{user.name}}</span></a></li>
+                </ng-template>
+                <li><a href=""><span>Домой</span></a></li>
+                <li><a href ="" routerLink = "/user"><span>Пользователи</span></a></li>
+                <li><a href ="" routerLink = "/post"><span>Посты</span></a></li>
+                <li><a href ="" [routerLink]="['/profile', user.id]"><span>Редактировать</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>

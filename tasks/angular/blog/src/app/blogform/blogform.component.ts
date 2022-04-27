@@ -1,34 +1,55 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Blog } from '../blog.model';
+import { BlogsvService } from '../blogsv.service';
 
 @Component({
   selector: 'app-blogform',
   templateUrl: './blogform.component.html',
-  styleUrls: ['./blogform.component.scss']
+  styleUrls: ['./blogform.component.scss'],
 })
-export class BlogformComponent {
-date: Date = new Date();
-title:string="";
-text:string="";
-preview:string = "";
-user:string = "";
-@Output()
+export class BlogformComponent implements OnInit {
+  
+  users:string[] = [];
+  blogForm: FormGroup;
 
-onSent = new EventEmitter<Blog>();
+constructor(private formBuilder: FormBuilder, private blogsvService: BlogsvService ){
+
+this.blogForm = formBuilder.group({
+  "title": ["",[Validators.required, Validators.minLength(10)]],
+  "preview": ["",[Validators.required]],
+  "user": [this.users[0],[Validators.required]],
+  "data": [new Date(),[Validators.required]],
+  "text": ["",[Validators.required]],
+})
+
+this.users = this.blogsvService.getUsers();
+}
+ngOnInit(){
+  
+}
 
  addBlog():void{
-   if(this.title == "" || this.text == ""|| this.preview == "" || this.user == "")
-   return;
+  let newId;
+  let blogs = this.blogsvService.getData()
+  if(blogs.length == 0)
+      newId = 1;
+  else
+      newId = blogs[blogs.length - 1].id + 1;
 
-   let blog = new Blog(this.title,this.date,this.user,this.preview,this.text);
-   console.log(blog)
-   this.onSent.emit(blog);
+   let blog:Blog = {
+     id: newId,
+     title: this.blogForm.value.title, 
+    date: this.blogForm.value.data, 
+    user: this.blogForm.value.user, 
+    preview: this.blogForm.value.preview, 
+    text: this.blogForm.value.text, 
+    img:"https://www.mts.by/local/templates/ns_mts/img/svg/logo-new.svg", 
+    favorite:false};
+   
+  this.blogsvService.addData(blog);
 
-   this.date = new Date();
-  this.title="";
-  this.text="";
-  this.preview = "";
-  this.user = "";
+   this.blogForm.reset()
  }
 
 }

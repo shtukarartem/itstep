@@ -5,18 +5,10 @@ import { Blog } from './blog.model';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: [BlogsvService]
-})
-export class AppComponent implements OnInit {
   
-  blogs: Blog[] = [];
-  constructor(private blogsvService: BlogsvService){}
+})
+export class AppComponent  {
+  
 
-  ngOnInit(){
-    this.blogs = this.blogsvService.getData();
-  }
-  addBlog(blog:any):void{
-    this.blogsvService.addData(blog);
-    console.log(blog)
-  }
+
 }

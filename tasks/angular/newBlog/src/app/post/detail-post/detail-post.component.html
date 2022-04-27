@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row">
+        <div class="col-1">
+            <img class="aut-pic" [src]="post.img" [alt]="post.title">
+        </div>
+        <div class="col-11">
+          <div class="autor">
+            <div class="col-12">
+                <span><!--{{getUserName(comment.userId)}}--></span>
+            </div>
+            <div class="col-12">
+                <span>{{post.date | date:'dd.MM.yyyy'}}</span>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 title">
+            <span class="title-in"> {{post.title}} </span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <span>
+                {{post.text}}
+            </span>
+        </div>
+    </div>
+    
+
+    <div class="comments">
+        <div *ngFor = "let comment of comments">
+
+            <div class="com">
+                <div class="row">
+                    <div class="col-12">
+                      <div class="autor">
+                        <div class="col-12">
+                            <span><!--{{getUserName(comment.userId)}}--></span>
+                        </div>
+                        <div class="col-12">
+                            <span>{{comment.date | date:'dd.MM.yyyy'}}</span>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            {{comment.text}}
+                        </div>
+                    </div>
+            </div>
+            </div>
+    </div>
+    <a [routerLink]="['/post']">Назад</a>
+    <app-comment-form [postId] = "post.id" (refData) = "dataGet($event)" ></app-comment-form>
+</div>

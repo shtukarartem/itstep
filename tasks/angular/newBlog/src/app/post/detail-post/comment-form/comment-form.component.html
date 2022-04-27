@@ -1,0 +1,26 @@
+<form [formGroup] = "commentForm" (ngSubmit)="addComment()" novalidate>
+    <div class="blog_form">
+        <div class="row">
+          <div class="mb-3 col-6">
+            </div>
+            <div class="mb-3 col-6">
+              <label for="blog_data" class="form-label">Дата:</label>
+              <input type="date" class="form-control" id="blog_data" placeholder="Дата блога" formControlName="data">
+              <div class="alert alert-danger"
+                *ngIf="commentForm.controls['data'].invalid && commentForm.controls['data'].touched">
+                Выберете дату
+              </div>
+            </div>
+        </div>
+        <div class="mb-3">
+          <label for="blog_text" class="form-label">Текст комментария:</label>
+          <textarea class="form-control" id="blog_text" rows="3" formControlName="text"></textarea>
+          <div class="alert alert-danger"
+          *ngIf="commentForm.controls['text'].invalid && commentForm.controls['text'].touched">
+          Введите текст
+        </div>
+        </div>
+        <button type="submit" class="btn btn-outline-success" [disabled] = "commentForm.invalid" >Success</button>
+  </div>
+  
+  </form>

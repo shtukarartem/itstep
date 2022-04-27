@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "вася",
+      "login": "admin",
+      "password": "12345",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "петя",
+      "login": "user",
+      "password": "12345",
+      "role": "user"
+    },
+    {
+      "name": "Парапам",
+      "login": "SDdsdsdsd",
+      "password": "Sdsaddasd",
+      "role": "user",
+      "id": 3
+    },
+    {
+      "name": "dasdasdad",
+      "login": "Sddsdsdsd",
+      "password": "Svfbdfgbgfdfbd",
+      "role": "admin",
+      "id": 4
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Это мой первый блог",
+      "date": "15.05.2005",
+      "userId": 1,
+      "preview": "Первый нах",
+      "text": "There’s no way to adequately express how cool I thought Will Smith was when I was a kid. So I’ll just put it this way ",
+      "img": "https://www.mts.by/local/templates/ns_mts/img/svg/logo-new.svg",
+      "favorite": false
+    },
+    {
+      "title": "dasdasdasdasdasd",
+      "date": "1231-03-12",
+      "userId": 1,
+      "preview": "vdsabvdsvcad",
+      "text": "dvsdfdsfsffds",
+      "img": "https://www.mts.by/local/templates/ns_mts/img/svg/logo-new.svg",
+      "favorite": false,
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "userId": 1,
+      "postId": 1,
+      "date": "15.06.2012",
+      "text": "Первый комментарий"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "postId": 1,
+      "date": "16.06.2012",
+      "text": "второй комментарий"
+    }
+  ]
+}

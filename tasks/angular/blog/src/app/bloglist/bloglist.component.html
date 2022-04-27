@@ -6,7 +6,10 @@
             </div>
         </div>
         <div *ngFor = "let blog of blogs" class="col-12">
-            <app-blog [blog] = "blog"></app-blog>
+            <app-blog [blog] = "blog" class="blog"></app-blog>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-outline-success" routerLink="/form">Добавить</button>
         </div>
     </div>
 </div>

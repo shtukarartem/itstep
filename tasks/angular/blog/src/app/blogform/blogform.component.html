@@ -1,23 +1,60 @@
-<div class="blog_form">
-    <div class="mb-3">
-        <label for="blog_title" class="form-label">Название блога</label>
-        <input [(ngModel)] = "title" type="text" class="form-control" id="blog_title" placeholder="Введите название блога">
-      </div>
-      <div class="mb-3">
-        <label for="blog_preview" class="form-label">Превью</label>
-        <input [(ngModel)]= "preview" type="text" class="form-control" id="blog_preview" placeholder="Введите превью блога">
-      </div>
-      <div class="mb-3">
-        <label for="blog_user" class="form-label">Пользователь:</label>
-        <input [(ngModel)] = "user" type="text" class="form-control" id="blog_user" placeholder="Введите пользователя блога">
-      </div>
-      <div class="mb-3">
-        <label for="blog_date" class="form-label">Дата:</label>
-        <input [(ngModel)] = "date" type="date" class="form-control" id="blog_date" placeholder="Дата блога">
+<form [formGroup] = "blogForm"(ngSubmit)="addBlog()" novalidate>
+  <div class="blog_form">
+    <div class="row">
+        <div class="mb-3 col-6">
+            <label for="blog_title" class="form-label">Название блога</label>
+            <input type="text" class="form-control" id="blog_title" placeholder="Введите название блога" formControlName="title">
+            <div class="alert alert-danger" *ngIf="blogForm.controls['title'].invalid && blogForm.controls['title'].touched">
+
+            <span *ngIf="blogForm.controls['title'].errors?.['required']">
+              Ничего не введено
+            </span>
+            <span *ngIf="blogForm.controls['title'].errors?.['minlength']">
+              Меньше 10 символов
+          </span>
+            </div>
+
+          </div>
+          <div class="mb-3 col-6">
+            <label for="blog_preview" class="form-label">Превью</label>
+            <input type="text" class="form-control" id="blog_preview" placeholder="Введите превью блога" formControlName="preview">
+            <div class="alert alert-danger"
+              *ngIf="blogForm.controls['preview'].invalid && blogForm.controls['preview'].touched">
+              Не вписано превью
+            </div>
+          </div>
+    </div>
+      <div class="row">
+        <div class="mb-3 col-6">
+            <label for="blog_user" class="form-label">Пользователь:</label>
+            <select class="slct" id="blog_user" placeholder="Выберете пользователя блога" formControlName="user">
+              <option *ngFor="let user of users" [ngValue]="user">
+                {{user}}
+              </option>
+            <div class="alert alert-danger"
+              *ngIf="blogForm.controls['user'].invalid && blogForm.controls['user'].touched">
+              Не вписано имя пользователя
+            </div>
+          </select>
+          </div>
+          <div class="mb-3 col-6">
+            <label for="blog_data" class="form-label">Дата:</label>
+            <input type="date" class="form-control" id="blog_data" placeholder="Дата блога" formControlName="data">
+            <div class="alert alert-danger"
+              *ngIf="blogForm.controls['data'].invalid && blogForm.controls['data'].touched">
+              Выберете дату
+            </div>
+          </div>
       </div>
       <div class="mb-3">
         <label for="blog_text" class="form-label">Текст блога:</label>
-        <textarea [(ngModel)] = "text" class="form-control" id="blog_text" rows="3"></textarea>
+        <textarea class="form-control" id="blog_text" rows="3" formControlName="text"></textarea>
+        <div class="alert alert-danger"
+        *ngIf="blogForm.controls['text'].invalid && blogForm.controls['text'].touched">
+        Введите текст
       </div>
-      <button type="submit" class="btn btn-outline-success" (click) = "addBlog()">Success</button>
+      </div>
+      <button type="submit" class="btn btn-outline-success" [disabled] = "blogForm.invalid">Success</button>
 </div>
+
+</form>
