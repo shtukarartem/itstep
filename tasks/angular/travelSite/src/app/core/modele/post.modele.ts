@@ -1,10 +1,11 @@
 export interface Post {
     id: number,
     title: string,
-    date: Date,
+    date: string,
     userId:number,
     preview:string,
     img:string,
     text:string,
-    count:number
+    users:number[]
+
 }

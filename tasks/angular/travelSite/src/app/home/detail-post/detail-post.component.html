@@ -1,1 +1,6 @@
-<p>detail-post works!</p>
+<p>{{post.title}}</p>
+<p>{{post.date | date:'dd.MM.yyyy'}}</p>
+
+<p>{{post.fullText}}</p>
+<img [src]="post.img" [alt]="post.title">
+<a [routerLink]="['/home']">Назад</a>

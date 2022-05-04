@@ -4,6 +4,9 @@ import { HomeComponent } from './home.component';
 import { DetailPostComponent } from './detail-post/detail-post.component';
 import { FormPostComponent } from './form-post/form-post.component';
 import { EditPostComponent } from './edit-post/edit-post.component';
+import { PostRoutingModule } from './post-routing.module';
+import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +18,10 @@ import { EditPostComponent } from './edit-post/edit-post.component';
     EditPostComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PostRoutingModule,
+    RouterModule,
+    ReactiveFormsModule
   ]
 })
 export class HomeModule { }

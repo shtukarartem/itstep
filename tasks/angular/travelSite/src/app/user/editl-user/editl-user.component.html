@@ -1,1 +1,51 @@
-<p>editl-user works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form class="row" [formGroup]="editForm" novalidate (ngSubmit)="editUser()">
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="user_name" class="form-label">Имя</label>
+                        <input type="text" formControlName="name" name="name" class="form-control" id="user_name" placeholder="Имя" value="{{user.name}}">
+                    </div>
+                    <div *ngIf="editForm.controls['name'].invalid && editForm.controls['name'].touched" class="alert alert-danger">
+                        Что-то пошло не так
+                    </div>  
+                </div>
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="user_login" class="form-label">Логин</label>
+                        <input type="text" formControlName="login" name="login" class="form-control" id="user_login" placeholder="Логин" value="{{user.login}}">
+                    </div>
+                    <div *ngIf="editForm.controls['login'].invalid && editForm.controls['login'].touched" class="alert alert-danger">
+                        Что-то пошло не так
+                    </div>  
+                </div>
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="user_password" class="form-label">Пароль</label>
+                        <input type="password" formControlName="password" name="password" class="form-control" id="user_password" placeholder="Пароль" value="{{user.password}}">
+                    </div>
+                    <div *ngIf="editForm.controls['password'].invalid && editForm.controls['password'].touched" class="alert alert-danger">
+                        Что-то пошло не так
+                    </div>  
+                </div> 
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="user_role" class="form-label">Роль</label>
+                        <select id="inputState" formControlName="role" name="role" class="form-control" id="user_role" [class.error]="editForm.controls['role'].invalid && editForm.controls['role'].touched">
+                            <option>user</option>
+                            <option>admin</option>
+                            <option>guide</option>
+                          </select>
+                    </div>
+                    <div *ngIf="editForm.controls['password'].invalid && editForm.controls['password'].touched" class="alert alert-danger">
+                        Что-то пошло не так
+                    </div>  
+                </div> 
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary" [disabled]="editForm.invalid">изменить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

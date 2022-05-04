@@ -1,1 +1,21 @@
-<p>auth works!</p>
+<form [formGroup] = "signInForm" (ngSubmit)="checkUser()" novalidate>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Логин</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Введите логин" formControlName="login">
+     
+        <span *ngIf="signInForm.controls['login'].errors?.['required']">
+          Ничего не введено
+        </span>
+        
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Пароль</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" formControlName="password">
+      <span *ngIf="signInForm.controls['password'].errors?.['required']">
+        Ничего не введено
+      </span>
+
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled] = "signInForm.invalid">Submit</button>
+    
+  </form>

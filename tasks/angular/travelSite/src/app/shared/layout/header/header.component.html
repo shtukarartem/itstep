@@ -1,1 +1,19 @@
-<p>header works!</p>
+<div class="headder">
+    <div class="row">
+        <div class="col-6">
+            <span class="hadder-name">
+                Тутутуры
+            </span>
+           <span>{{user.name}}</span>
+        </div>
+        <div class="col-6">
+            <ul class="ul-h">
+
+                <li><a href=""><span>Домой</span></a></li>
+                <li><a href ="" routerLink = "/user"><span>Пользователи</span></a></li>
+                <li><a href ="" routerLink = "/post"><span>Посты</span></a></li>
+                <li><a href ="" [routerLink]="['/profile']"><span>Редактировать</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
